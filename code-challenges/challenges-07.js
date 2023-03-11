@@ -21,18 +21,19 @@
 //  2- The first letters of the firstName and lastName should be capital letter
 
 const objLat = (obj) => {
-  this.firstName = firstName;
-  this.lastName = lastName;
-  this.age = age;
-  this.hobby = hobby;
-  this.newFun = function (Output) {
-    firstName = firstName.charAt(0);
-    lastName = lastName.charAt(0);
-    document.write(
-      `my name is ${this.firstName} ${this.lastName} I am ${this.age},and I love ${this.hobby}`
-    );
-  };
   // write your code here
+  let fName = obj.firstName[0].toUpperCase() + obj.firstName.slice(1);
+  let lName = obj.lastName[0].toUpperCase() + obj.lastName.slice(1);
+
+  return (
+    "my name is " +
+    fName +
+    lName +
+    " I am " +
+    obj.age +
+    " , and I love " +
+    obj.hobby
+  );
 };
 // -------------------------------------------------------------------------------------------------------
 
@@ -74,7 +75,7 @@ const objLat = (obj) => {
 //         tech: "Java"
 //     }
 // ]
-//
+
 // Output:
 // [
 //     {
@@ -96,12 +97,14 @@ const objLat = (obj) => {
 //  2- If one of the names is null don`t add it to the full name
 
 const cvFormatter = (arr) => {
-  if (yearsOfExperience >= 1) {
-    let newArray = [];
-    newArray.push(
-      `Full Name : ${this.firstName} ${this.lastName}  technology: ${this.tech}`
-    );
+  for (let i = 0; i < cvs.length; i++) {
+    if (cvs[i].yearsOfExperience >= 1) {
+      arr.push(
+        `Full Name : ${cvs[i].firstName} ${cvs[i].lastName}  technology: ${cvs[i].tech}`
+      );
+    }
   }
+  return arr;
   // write your code here
 };
 // -------------------------------------------------------------------------------------------------------
