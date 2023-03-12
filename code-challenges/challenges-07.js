@@ -28,11 +28,13 @@ const objLat = (obj) => {
   return (
     "my name is " +
     fName +
+    " " +
     lName +
     " I am " +
     obj.age +
-    " , and I love " +
-    obj.hobby
+    " YO, and I love " +
+    obj.hobby +
+    "."
   );
 };
 // -------------------------------------------------------------------------------------------------------
@@ -49,7 +51,7 @@ const objLat = (obj) => {
 //  fullName and tech if the applicant has more than one year of Experience
 
 // Input:
-// let cvs = [
+// let cvs  = [
 //     {
 //         firstName: "Jason",
 //         lastName: "James",
@@ -95,7 +97,7 @@ const objLat = (obj) => {
 //  Note that:
 //  1- Full name is first name + last name
 //  2- If one of the names is null don`t add it to the full name
-
+let arr = [];
 const cvFormatter = (arr) => {
   for (let i = 0; i < cvs.length; i++) {
     if (cvs[i].yearsOfExperience >= 1) {
