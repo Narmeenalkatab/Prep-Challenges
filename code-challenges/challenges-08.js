@@ -30,10 +30,10 @@ const customerAndAge = (obj) => {
   let array = [];
 
   for (let data in obj) {
-    array += `Customer Name :${data} ,Age:${obj[data]} ,`;
+    array.push(`Customer Name :${data} , Age :${obj[data]}`);
   }
 
-  console.log(array);
+  return array;
 };
 // -------------------------------------------------------------------------------------------------------
 
