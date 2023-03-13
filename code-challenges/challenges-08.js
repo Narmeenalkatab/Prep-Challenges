@@ -56,7 +56,11 @@ const customerAndAge = (obj) => {
 // ["name: pizza", "ingredients: bread,tomato,chicken,mayo", "cookTime: twoHours", "price: 25$"]
 //
 // Note:
-// You can solve this challenge by using Object.entries ...
+// You can solve this challenge by using Object.entries 
+
+// just for pushing :
+
+console.log("n");
 
 const getEntries = (obj) => {
   // write your code here
