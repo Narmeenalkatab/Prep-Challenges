@@ -98,17 +98,27 @@ const objLat = (obj) => {
 //  1- Full name is first name + last name
 //  2- If one of the names is null don`t add it to the full name
 
+
+
+
 const cvFormatter = (arr) => {
   let arr1 = [];
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i].yearsOfExperience >= 1) {
-      // let obj = {
-       
-      // };
+    // let fullN ;
 
-      arr1.push( {"fullName": arr[i].firstName + " " + arr[i].lastName,
-      "tech": arr[i].tech,});
-      // obj = null;
+    
+
+    if (arr[i].yearsOfExperience >1) {
+      if (arr[i].lastName == null ) {
+        arr1.push({ "fullName":arr[i].firstName, "tech": arr[i].tech });
+
+        // fullN = arr[i].firstName + " ";
+      } else {
+        // fullN = arr[i].firstName + " " + arr[i].lastName;
+        arr1.push({ "fullName":  arr[i].firstName + " " + arr[i].lastName, "tech": arr[i].tech });
+      }
+
+      
     }
   }
   return arr1;
