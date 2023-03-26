@@ -40,11 +40,12 @@
 
 const objectCounter = (obj) => {
     // write your code here
-    let objectN=0;
-    obj.reduce((accumulator, currentValue) => {
-        objectN+=1;
-    });
-    return objectN;
+   
+    let result= obj.reduce((acc, curr) => {
+        acc++;
+        return acc;
+    },0);
+    return result;
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -66,11 +67,13 @@ const objectCounter = (obj) => {
 const stringReverse = (str) => {
     // write your code here
     let array = str.split(' ');
-  array.reduce((w1, w2) =>{
-    w1+' '+w2;
-  } )
- 
-return array
+ let result = array.reduce((acc, curr) =>{
+    acc.unshift(curr);
+
+    return acc;
+  } ,[])
+ return result.join(" ");
+
     }
 
 // -------------------------------------------------------------------------------------------------------
@@ -116,7 +119,19 @@ return array
 
 const statistics = (obj) => {
     // write your code here
-}
+
+    let result = obj.reduce((acc, curr) =>{
+
+      let key= curr["votes_To"];
+    acc[key]= (acc[key] || 0 )+1;
+     return acc;
+      } ,{})
+     return result;
+    
+        }
+
+
+
 // -------------------------------------------------------------------------------------------------------
 
 
