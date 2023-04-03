@@ -63,41 +63,48 @@ const LastWord_2 = (str) => {
 // Required:
 //
 // Number 2 was easy right?, ok then using the splice method replace all the "I" with "We", "am" with "are" and "was" with "were"
-//
+
 // Note: you may use another method for search (indexOf)
-//
+
 // Input:  "I thought you had a plan"
 // Output: "We thought you had a plan"
-//
+
 // Input: "I was there 3000 years ago"
 // Output: "We were there 3000 years ago"
 
 // Input: "I am Venom"
 // Output: "We are Venom"
-//
+
 
 const replaceWords = (str) => {
+
+let output = str.split(" ");
+
+for (let i = 0; i < output.length; i++) {
+  if (output[i] === "I") {
+    output.splice(i, 1, "We");
+  } else if (output[i] === "am") {
+    output.splice(i, 1, "are");
+  } else if (output[i] === "was") {
+    output.splice(i, 1, "were");
+  }
+}
+
+output = output.join(" ");
+return output;
+
+}
+
+
+
     // write your code here
-let array = str.split(" ");
-
-
-let iIndex = array.indexOf("I");
-array.splice(iIndex, 1, "We");
-
 // let amIndex = array.indexOf("am");
 // let wasIndex = array.indexOf("was");
-
     //
     // array.splice(amIndex, 1, "are");
     // array.splice(wasIndex, 1, "were");
-for (let i=0; i<array.length;i++){
-    var string = string + " " +array[i];
 
-}
 
-    return string;
-
-}
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
