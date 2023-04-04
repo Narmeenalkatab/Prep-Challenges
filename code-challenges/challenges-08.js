@@ -30,10 +30,10 @@ const customerAndAge = (obj) => {
   let array = [];
 
   for (let data in obj) {
-    array += `Customer Name :${data} ,Age:${obj[data]} ,`;
+    array.push(`Customer Name :${data} , Age :${obj[data]}`);
   }
 
-  console.log(array);
+  return array;
 };
 // -------------------------------------------------------------------------------------------------------
 
@@ -56,7 +56,11 @@ const customerAndAge = (obj) => {
 // ["name: pizza", "ingredients: bread,tomato,chicken,mayo", "cookTime: twoHours", "price: 25$"]
 //
 // Note:
-// You can solve this challenge by using Object.entries
+// You can solve this challenge by using Object.entries 
+
+// just for pushing :
+
+console.log("n");
 
 const getEntries = (obj) => {
   // write your code here
